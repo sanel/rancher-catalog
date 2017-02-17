@@ -1,0 +1,11 @@
+version: '2'
+services:
+  opentsdb:
+    image: petergrace/opentsdb-docker:latest
+    hostname: opentsdb
+    volumes:
+    - /var/lib/opentsdb/data:/data/hbase
+    - /var/lib/opentsdb/tmp:/tmp
+    ports:
+    - ${tsd_host}:${tsd_port}:4242/tcp
+    - ${hbase_info_host}:${hbase_info_port}:60030/tcp

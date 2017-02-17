@@ -1,0 +1,5 @@
+name: OpenTSDB Single 2.30
+description: |
+  Scalable time series database, single instance
+version: 2.3.0-sanel0
+category: OpenTSDB

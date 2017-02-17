@@ -1,0 +1,32 @@
+.catalog:
+  name: "OpenTSDB Single"
+  version: "2.3.0-sanel0"
+  description: "Scalable time series database, single instance"
+  questions:
+    - variable: tsd_host
+      description: "TSD host where metrics are reported. Using 0.0.0.0 will make it globally visible."
+      label: "TSD host"
+      type: "string"
+      required: true
+      default: "127.0.0.1"
+
+    - variable: tsd_port
+      description: "TSD port where metrics are reported and web server served."
+      label: "TSD port"
+      type: "int"
+      required: true
+      default: "4242"
+
+    - variable: hbase_info_host
+      description: "HBase regionserver info host. Using 0.0.0.0 will make it globally visible."
+      label: "HBase regionserver host"
+      type: "string"
+      required: true
+      default: "127.0.0.1"
+
+    - variable: tsd_port
+      description: "HBase regionserver info port."
+      label: "HBase regionserver port"
+      type: "int"
+      required: true
+      default: "60030"
